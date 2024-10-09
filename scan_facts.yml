@@ -3,6 +3,10 @@
     scan_use_checksum: false
     scan_use_recursive: false
   tasks:
+    - name: Install bottle python package
+      ansible.builtin.pip:
+        name: python3-rpm
+        name: rpm
 
     - name: "Scan packages (Unix/Linux)"
       scan_packages:
